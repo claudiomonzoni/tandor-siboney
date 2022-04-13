@@ -3,14 +3,15 @@
 import '../styles/style.scss';
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro';
-import Slider from '../components/Slider.astro';
+import Hero from '../components/Hero.astro';
+import DebajoHero from '../components/DebajoHero.astro';
 
-let titulo = "Esto es Home"
+let titulo = "Ropa de caballero en Ixtapa"
 ---
 <BaseLayout eltitulo={titulo}>
 <main >
-  <Slider />
-	<h1>{titulo}</h1>
+	<Hero encabezado={titulo} />
+	<DebajoHero />	
 
 </main>
 </BaseLayout>

@@ -1,0 +1,80 @@
+---
+const {encabezado} = Astro.props
+---
+
+<div class="hero">
+  <div class="izq">
+    <div class="bandeja">
+      <img
+        class="logo"
+        src="../public/assets/tandor-logo-ropa-caballero-ixtapa.svg"
+        alt=""
+      />
+      <h1 class="encabezado">{encabezado}</h1>
+      <a href="#ubicacion" class="btn">UBICACIÓN</a>
+    </div>
+  </div>
+  <div class="der">
+    <img
+      src="../public/assets/Tandor-ropa-hombre-ixtapa-zihuatanejo.webp"
+      alt="{encabezado}"
+    />
+  </div>
+
+  <style lang="scss">
+    .hero {
+      display: flex;
+      height: 100vh;
+      flex-wrap: wrap;
+    }
+    .logo {
+      width: clamp(200px, 5vw, 400px);
+      margin-bottom: 1.2rem;
+    }
+    .encabezado {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      flex: 1 0 100%;
+      padding-bottom: 1em;
+      line-height: 1em;
+    }
+    .izq {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      height: 100%;
+      padding: 0 6rem;
+      @media (max-width: 414px) {
+        flex: 1 0 100%;
+        height: 50%;
+      }
+    }
+
+    .der {
+      display: flex;
+      width: 50%;
+      height: 100%;
+      img {
+        object-fit: cover;
+      }
+      @media (max-width: 414px) {
+        flex: 1 0 100%;
+        height: 50%;
+      }
+    }
+
+    .btn {
+      background-color: #fc7f0c;
+      color: #fff;
+      padding: 0.5em 2em;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #000;
+      color: #f7f7f7;
+    }
+  </style>
+</div>
