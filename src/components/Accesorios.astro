@@ -27,7 +27,68 @@
 
     <style lang="scss">
         $gris: #353535;
-        .accesorio{
+        #accesorios{
+            display: flex;
+            width:min(100% - 5rem, 80rem);
+            margin-inline: auto;
+            margin-top:3rem;
+        }
+        #izq{
+            display: inline-block;
+            vertical-align: top;
+            width: 60%;
+            img{
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        #texto{
+            background-color: $gris;
+          color: white;
+          padding: 3rem;
+          margin-bottom: 1rem;
+        }
+        #der{
+            width: 40%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .accesorio{
+                display: inherit;
+                justify-content: center;
+                align-items: center;
+                padding: 0 6rem;      
+                position: relative;  
+                z-index: auto; 
+                -webkit-clip-path: circle(50% at 50% 50%);
+                    &::after{
+                    content: '';
+                    clip-path: circle(30% at 50% 50%);
+                    width: 70%;
+                    height: 100%;
+                    background-color: #fce8db;
+                    position: absolute;
+                    z-index: -1;
+                }   
+          }
+        }
 
-}        
+        @media(max-width: 414px){
+            #accesorios{
+                width: 100%;
+                flex-wrap: wrap;
+                margin-top: 0;
+            }
+            #izq{
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+            #der{
+                width: 100%;
+                .accesorio{
+               height: 200px;
+                }
+            }
+        }
     </style>
