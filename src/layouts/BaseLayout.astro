@@ -1,5 +1,6 @@
 ---
 const {eltitulo} = Astro.props
+const descripcion = "tienda de ropa para caballero en Ixtapa Zihuatanejo pensada para los que quieren lucir bien y estar comodos en eventos en la playa"
 ---
 
     <html lang="es">
@@ -7,6 +8,7 @@ const {eltitulo} = Astro.props
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<title>Tandor | {eltitulo} Zihuatanejo</title>
+	 <meta name="description" content={descripcion} />
 	<link rel="icon" type="image/x-icon" href="/favicon.ico" />
 </head>
 <body>
