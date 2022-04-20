@@ -1,2 +1,2 @@
 # Redirect default Netlify subdomain to primary domain
-https://tandor.netlify.com/* https://www.tandorixtapa.com/:splat 301!
+# https://siboney.netlify.com/* https://www.siboneyixtapa.com/:splat 301!

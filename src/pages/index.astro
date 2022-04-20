@@ -4,22 +4,14 @@ import '../styles/style.scss';
 // Component Imports
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/Hero.astro';
-import DebajoHero from '../components/DebajoHero.astro';
-import Marcas from '../components/Marcas.astro';
-import Escenciales from '../components/Escenciales.astro';
-import Accesorios from '../components/Accesorios.astro';
-import Ubicacion from '../components/Ubicacion.astro';
+
 import Footer from '../components/Footer.astro';
-let titulo = "Ropa de caballero en Ixtapa"
+let titulo = "Trajes de baño y ropa de playa en Ixtapa"
 ---
 <BaseLayout eltitulo={titulo}>
 <main >
 	<Hero encabezado={titulo} />
-	<DebajoHero />	
-	<Marcas />
-	<Escenciales />
-	<Accesorios />
-	<Ubicacion />
+	
 	<Footer />
 
 </main>
