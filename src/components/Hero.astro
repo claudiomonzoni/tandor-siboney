@@ -3,16 +3,15 @@ const {encabezado} = Astro.props
 ---
 
 <div class="hero">
-
   <div class="izq">
     <div id="nav">
-  <div class="cafe"></div>
+      <div class="cafe"></div>
       <img
         class="logo"
         src="/assets/siboney-logo-trajes-ropa-playa.svg"
         alt="Trajes de baño y ropa de playa en Ixtapa Zihuatanejo"
       />
-    <div class="azul"></div>
+      <div class="azul"></div>
     </div>
 
     <div class="bandeja">
@@ -22,101 +21,113 @@ const {encabezado} = Astro.props
   </div>
 
   <div class="der"></div>
-  <div class="modelos">
+  <div class="modelos"></div>
 </div>
 
-</div>
+<style lang="scss">
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 414px) {
+      grid-template-columns: 1fr;
+      gridtemplate-rows: 1fr 1fr;
+    }
+  }
+  .encabezado {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    flex: 1 0 100%;
+    padding-bottom: 1em;
+    line-height: 1em;
+  }
+  .izq {
+    grid-column: 1 / 4;
+    grid-row: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: url("/assets/fondo-palmas-playa-siboney.webp") no-repeat right
+      bottom;
+    background-size: 60%;
 
-  <style lang="scss">
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-        @media (max-width: 414px) {
-          grid-template-columns: 1fr;
-        }
+    #nav {
+      align-self: flex-start;
+      flex: 1 0 100%;
+      display: flex;
+      .cafe {
+        background-color: #edd3a6;
+        flex: 0.5;
+      }
+      .logo {
+        padding: 2em;
+        grid-column: 2;
+        width: clamp(200px, 5vw, 400px);
+        flex: 2;
+        max-width: 400px;
+      }
+      .azul {
+        flex: 3;
+        background-color: #2a209e;
+      }
+    }
 
-      .modelos{
-        grid-column:3 / -1;
-        grid-row: 1 ;
-        padding: 0;
-        margin: 0;
-        background: url("/assets/trajes-de-bano-en-ixtapa-cover.png") no-repeat bottom right;
+    .bandeja {
+      width: 50%;
+    }
+
+    @media (max-width: 414px) {
+      height: 60vh;
+      background-size: 120%;
+      background-position: -50% 0%;
+      .bandeja {
+        width: 80%;
+        pandding: 2em;
+      }
+    }
+  }
+
+  .der {
+    grid-column: 4 / -1;
+    grid-row: 1;
+    background: url("/assets/arena-mar-siboney.webp") no-repeat right center;
+    background-size: cover;
+
+    
+    @media (max-width: 414px) {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      max-height: 20vh;
+    }
+  }
+
+  .modelos {
+      grid-column: 3 / -1;
+      grid-row: 1;
+      padding: 0;
+      margin: 0;
+      background: url("/assets/trajes-de-bano-en-ixtapa-cover.png") no-repeat bottom right;
       background-size: 75%;
       height: 90vh;
-       @media (max-width: 414px) {
-         height: 60vh;
-         grid-column:1 / -1;
-        grid-row: auto;
-      }
-      }
-    }
-    .encabezado {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      flex: 1 0 100%;
-      padding-bottom: 1em;
-      line-height: 1em;
-    }
-    .izq {
-      grid-column: 1 / 4;
-      grid-row: 1;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      background: url("/assets/fondo-palmas-playa-siboney.webp") no-repeat right
-        center;
-      background-size: 60%;
-
-        
-        #nav {
-          align-self: flex-start;
-            flex: 1 0 100%;
-            display: flex;
-          .cafe{
-            background-color: #edd3a6;
-            flex: .5;
-          }
-          .logo{
-            padding: 2em;
-            grid-column: 2 ;
-            width: clamp(200px, 5vw, 400px);
-            flex : 2;
-            max-width: 400px;
-          }
-          .azul{
-            flex: 3;
-            background-color: #2a209e;
-          }
-        }
-      
-      .bandeja {
-        width: 50%;
-      }
-
       @media (max-width: 414px) {
-        }
-    }
-
-    .der {
-      grid-column: 4 / -1;
-      grid-row: 1;
-      background: url("/assets/arena-mar-siboney.webp") no-repeat right center;
-      background-size: cover;
-      @media (max-width: 414px) {
-        grid-row: auto;
+        grid-column: 1 / -1;
+        grid-row: 2;
+        background-size:100%;
+        background-position: 0px 20px;
+        height:57vh;
+        border-bottom: solid 1px #2a209e;
       }
     }
 
-    .btn {
-      background-color: #ec1b72;
-      color: #fff;
-      padding: 0.5em 2em;
-      font-size: 0.9rem;
-      border-radius: 0.4em;
-      cursor: pointer;
-    }
+  .btn {
+    background-color: #ec1b72;
+    color: #fff;
+    padding: 0.5em 2em;
+    font-size: 1.5rem;
+    border-radius: 0.4em;
+    cursor: pointer;
+  }
 
-    .btn:hover {
-      background-color: #000;
-      color: #f7f7f7;
-    }
-  </style>
+  .btn:hover {
+    background-color: #000;
+    color: #f7f7f7;
+  }
+</style>
