@@ -1,0 +1,95 @@
+---
+const h2 ="Playa o Piscina"
+---
+
+<div id="Playaoalberca">
+  <div class="bandeja">
+    <article>
+      <img src="/assets/icono-agua.svg" alt="Icono playa siboney" />
+      <h2>{h2}</h2>
+      <p>
+        La mejor manera de disfrutar la playa o la alberca es estando comoda,
+        por eso en Siboney te ofrecemos trajes de baño y ropa de playa de
+        calidad.
+      </p>
+    </article>
+
+    <img
+      src="/assets/trajes-de-bano-en-ixtapa-siboney-1.webp"
+      alt="Trajes de baño en Ixtapa Zihuatanejo Siboney"
+    />
+    <img
+      src="/assets/trajes-de-bano-en-ixtapa-siboney-1.webp"
+      alt="Trajes de baño en Ixtapa Zihuatanejo Siboney"
+    />
+  </div>
+</div>
+
+<article id="contexto">
+  Con más de 25 años en Ixtapa Zihuatanejo, Siboney es el lugar donde
+  encontraras variedad de bikinis, salidas de playa, sombreros, lentes, etc...
+  ideales para ti.
+</article>
+
+<style lang="scss">
+  #Playaoalberca {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 20%;
+    background: rgb(42, 32, 158);
+    position: relative;
+    background: linear-gradient(
+      90deg,
+      rgba(42, 32, 158, 1) 60%,
+      rgba(255, 255, 255, 1) 60%
+    );
+    &:before {
+      content: "";
+      width: 300px;
+      height: 300px;
+      background: url("/assets/fondo-planta-tropical-siboney.png") no-repeat;
+      background-size: cover;
+      mix-blend-mode: multiply;
+      position: absolute;
+      left: 0;
+      bottom:0%;
+      @media (max-width: 414px) {
+          bottom:40%;
+      }
+    }
+    @media (max-width: 768px) {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(42, 32, 158, 1) 40%
+      );
+    }
+
+    .bandeja {
+      width: min(100% - 5rem, 80rem);
+      margin-inline: auto;
+      display: flex;
+      gap: 1rem;
+      grid-column: 1/ -1;
+      color: #fff;
+      -webkit-transform: translateY(10%);
+      transform: translateY(10%);
+      @media (max-width: 414px) {
+        flex-wrap: wrap;
+      }
+    }
+  }
+
+  #contexto {
+    margin-top: 10%;
+    width: min(70% - 5rem, 80rem);
+    margin-inline: auto;
+    text-align: center;
+    font-size: clamp(1rem, 6vw, 1.5rem);
+
+    @media (max-width: 414px) {
+      margin-top: 50%;
+      width: min(100% - 5rem, 80rem);
+    }
+  }
+</style>
