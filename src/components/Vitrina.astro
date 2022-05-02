@@ -1,0 +1,111 @@
+---
+---
+
+<div id="vitrina">
+  <div class="contenedor">
+    <div class="carta">
+      <img
+        src="/assets/vitrina-traje-de-baño-1.png"
+        alt="Maaji Black tulip parade"
+      />
+      <div class="info">
+        <h3><b>Maaji</b> Black tulip parade</h3>
+      </div>
+    </div>
+    <div class="carta">
+      <img
+        src="/assets/vitrina-traje-de-baño-2.png"
+        alt="Maaji Black tulip parade"
+      />
+      <div class="info">
+        <h3><b>Phax</b> Join life scoop neck monokini</h3>
+      </div>
+    </div>
+    <div class="carta">
+      <img
+        src="/assets/vitrina-traje-de-baño-3.png"
+        alt="Maaji Black tulip parade"
+      />
+      <div class="info">
+        <h3><b>Gottex</b> Tutti Frutti Solid D-G Cup</h3>
+      </div>
+    </div>
+    <div class="carta">
+      <img
+        src="/assets/vitrina-traje-de-baño-4.png"
+        alt="Maaji Black tulip parade"
+      />
+      <div class="info">
+        <h3><b>Maaji</b> Red camilla ivy</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  #vitrina {
+    margin-top: 5rem;
+  }
+  .contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: min(100% - 5rem, 80rem);
+    margin-inline: auto;
+  }
+  .contenedor img {
+    height: 22vw;
+    width: auto;
+    @media (max-width: 414px) {
+        height: 42vh;
+    }
+  }
+  .carta {
+    flex: 1;
+    background-color: rgb(225, 207, 207);
+    padding: 2rem 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 11%,
+      rgb(225, 207, 207, 1) 11%,
+      rgb(225, 207, 207, 1) 80%,
+      rgba(255, 255, 255, 1) 80%
+    );
+  }
+  .carta:nth-of-type(2n) {
+      background: rgb(237, 211, 166, 1);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 1) 11%,
+      rgb(237, 211, 166, 1) 11%,
+      rgb(237, 211, 166, 1) 80%,
+      rgba(255, 255, 255, 1) 80%
+    );
+  
+}
+  .info {
+    text-align: left;
+    color: #fff;
+    background-color: #2a209e;
+    flex: 1 0 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    height: 150px;
+    @media (max-width: 414px) {
+     text-align: center;   
+    }
+  }
+  h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.4rem;
+  }
+</style>
