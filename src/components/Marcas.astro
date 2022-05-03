@@ -1,0 +1,95 @@
+---
+
+---
+
+<div id="marcas">
+  <div class="bandeja">
+    <div id="izq">
+    <div class="conte">
+      <h2>Marcas</h2>
+      <p>
+        Confiar en la calidad de tu traje de baño es muy importante, es por eso
+        que tenemos las mejores marcas para tí.
+      </p>
+    </div>
+    </div>
+    <div id="der">
+      <div class="marca">
+        <img
+          src="/assets/logo-maajii-siboney-ixtapa.webp"
+          alt="Maaji trajes de baño en ixtapa"
+        />
+      </div>
+      <div class="marca">
+        <img
+          src="/assets/logo-touche-siboney-ixtapa.webp"
+          alt="Touche trajes de baño en ixtapa"
+        />
+      </div>
+      <div class="marca">
+        <img
+          src="/assets/logo-gottex-siboney-ixtapa.webp"
+          alt="Gottex trajes de baño en ixtapa"
+        />
+      </div>
+      <div class="marca">
+        <img
+          src="/assets/logo-jantzen-siboney-ixtapa.webp"
+          alt="Jantzen trajes de baño en ixtapa"
+        />
+      </div>
+      <div class="marca">
+        <img
+          src="/assets/logo-offcorss-siboney-ixtapa.webp"
+          alt="Offcorss trajes de baño en ixtapa"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+.bandeja {
+width: min(100% - 5rem, 80rem);
+margin-inline:auto;
+margin-top:8em;
+display: flex;
+gap: 2rem;
+
+@media (max-width: 414px) {
+    flex-wrap: wrap;
+    margin-top:5em;
+
+  #izq, #der {
+      flex: 1 0 100%;
+  }
+}
+}
+#izq {
+flex: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+#der{
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #edd3a6;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    .marca{
+        padding: 1rem;
+        width: 40%;
+        @media (max-width: 414px) {
+          padding: 1.5rem;
+          width: 70%;
+        }
+        img{
+            mix-blend-mode: multiply;
+        }
+    }
+}
+</style>

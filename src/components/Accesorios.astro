@@ -1,0 +1,81 @@
+---
+---
+
+<div id="accesorios">
+  <img
+    src="/assets/accesorios-de-playa-siboney-ixtapa.webp"
+    alt="Lentes de sol, salidas de playa, sandalias, trajes de baño, pareos"
+  />
+  <div id="info">
+    <div class="conte">
+      <img
+        src="/assets/icono-sombrero.svg"
+        alt="Accesorios para playa Siboney"
+      />
+      <h2>Accesorios</h2>
+      <p>
+        Tu traje de baño debe estar acompañado con fantasticos accesorios de
+        playa y los tenemos para ti.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  #accesorios {
+    display: flex;
+    color: #fff;
+    width: min(100% - 5rem, 80rem);
+    margin-inline: auto;
+    margin-top: 7rem;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 1) 20%,
+      rgba(42, 32, 158, 1) 20%,
+      rgba(42, 32, 158, 1) 80%,
+      rgba(255, 255, 255, 1) 80%
+    );
+  }
+  #accesorios img {
+    flex: 2;
+    margin-left: 5rem;
+  }
+  #accesorios #info {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #info img {
+    margin-left: 0rem;
+  }
+  #info .conte {
+    width: 70%;
+  }
+  #accesorios h2 {
+    color: white;
+  }
+
+  @media (max-width: 414px) {
+    #accesorios {
+      flex-wrap: wrap;
+        margin-top: 6rem;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 5%,
+        rgba(42, 32, 158, 1) 5%,
+        rgba(42, 32, 158, 1) 95%,
+        rgba(255, 255, 255, 1) 95%
+      );
+    }
+    #accesorios img {
+      flex: 1 0 100%;
+      margin-left: 0rem;
+    }
+
+    #accesorios #info {
+     padding: 3rem 2rem;
+    }
+  }
+</style>
