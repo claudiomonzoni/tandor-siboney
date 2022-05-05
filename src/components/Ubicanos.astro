@@ -1,0 +1,62 @@
+---
+---
+
+<div id="ubicanos">
+  <div class="bandeja">
+    <h2>Ubicanos</h2>
+    <p class="info">Te esperamos en nuestro local comercial en Ixtapa</p>
+    <div class="izq">
+      <img
+        src="/assets/ubicanos-siboney-ixtapa.webp"
+        alt="Siboney Tienda de trajes de baño en Ixtapa Zihuatanejo"
+      />
+    </div>
+    <div class="der">
+      <div class="conte">
+        <h3>Dirección</h3>
+        <address>
+          <b>Centro comercial La Pueta local No.3 Boulevard Ixtapa</b>, frente al hotel
+          Presidente Intercontinental
+        </address>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  .bandeja {
+    width: min(100% - 5rem, 80rem);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+  }
+  h2,
+  .info {
+    flex: 1 0 100%;
+  }
+  .info {
+    margin-bottom: 2rem;
+  }
+
+  .izq {
+    flex: 2 1 auto;
+  }
+  .der {
+    flex: 1 1 30%;
+    background-color: #2a209e;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .conte {
+      width: 80%;
+    }
+      @media (max-width: 414px) {
+      padding: 2rem 0;
+    }
+  }
+  address{
+      font-style: normal;
+  }
+</style>

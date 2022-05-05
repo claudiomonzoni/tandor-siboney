@@ -1,0 +1,140 @@
+---
+---
+
+<div id="escensial">
+  <div class="bandeja">
+    <div class="encabezado">
+      <h2>Esenciales Siboney</h2>
+    </div>
+    <div class="productos">
+      <img
+        src="/assets/lentes-siboney.webp"
+        alt="lentes de sol siboney playa"
+      />
+
+      <div class="encabezado">
+        <h3>Lentes</h3>
+      </div>
+    </div>
+
+    <div class="productos">
+      <img
+        src="/assets/sombrero-playa-siboney-ixtapa.webp"
+        alt="sombreso y viseras de playa"
+      />
+
+      <div class="encabezado">
+        <h3>Sombreros y viseras</h3>
+      </div>
+    </div>
+
+    <div class="productos">
+      <img
+        src="/assets/sandalias-playa-siboeny-ixtapa.webp"
+        alt="Sandalias de playa"
+      />
+
+      <div class="encabezado">
+        <h3>Sandalias</h3>
+      </div>
+    </div>
+
+    <div class="productos">
+      <img
+        src="/assets/salidas-playa-siboeny-ixtapa.webp"
+        alt="Salidas de playa y vestidos de lino"
+      />
+
+      <div class="encabezado">
+        <h3>Salidas de playa y vestidos de lino</h3>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  #escensial {
+    margin-top: 7rem;
+  }
+  .bandeja {
+    display: flex;
+    flex-wrap: wrap;
+    width: min(100% - 5rem, 80rem);
+    margin-inline: auto;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .encabezado {
+    flex: 1;
+  }
+  .encabezado h2 {
+    border-bottom: 1px solid #2a209e;
+  }
+  .productos {
+    flex: 1 0 35%;
+    max-width: 35%;
+    display: flex;
+    padding: 3rem 0;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 30%,
+      rgba(230, 247, 253, 1) 30%,
+      rgba(230, 247, 253, 1) 80%,
+      rgba(255, 255, 255, 1) 80%
+    );
+    align-items: center;
+      &:nth-of-type(2n + 1) {
+          .encabezado{
+           background-color: #edd3a6;
+           h3{
+               color: #2a209e;
+           }
+          }
+
+              @media (max-width: 414px) {
+                img{
+                    order: 2;
+                }
+           }
+           
+        }
+  }
+  .productos img {
+    flex: 1;
+    padding: 1rem;
+    max-width: 20vw;
+    height: auto;
+    align-self: center;
+  }
+  .productos .encabezado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a209e;
+    padding: 1rem;
+    flex: 2 1 auto;
+    height: 20vh;
+   
+
+  }
+
+  h3 {
+    color: #fff;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    text-align: center;
+    padding: 0;
+  }
+
+  @media (max-width: 414px) {
+    .productos {
+      max-width: 100%;
+    }
+    .productos img {
+      padding: 1rem;
+      max-width: 20vh;
+      height: auto;
+    }
+  }
+</style>
