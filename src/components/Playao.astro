@@ -1,5 +1,5 @@
 ---
-const h2 ="Playa o Piscina"
+const h2 = "Playa o Piscina"
 ---
 
 <div id="Playaoalberca">
@@ -14,14 +14,13 @@ const h2 ="Playa o Piscina"
       </p>
     </article>
 
-    <img
-      src="/assets/trajes-de-bano-en-ixtapa-siboney-1.webp"
-      alt="Trajes de baño en Ixtapa Zihuatanejo Siboney"
-    />
-    <img
-      src="/assets/trajes-de-bano-en-ixtapa-siboney-1.webp"
-      alt="Trajes de baño en Ixtapa Zihuatanejo Siboney"
-    />
+    <div class="traje">
+      
+      <img src="/assets/trajes-de-bano-en-ixtapa-siboney-1.webp" alt="Trajes de baño en Ixtapa Zihuatanejo Siboney" />
+    </div>
+    <div class="traje">
+    <img src="/assets/siboney-maaji-ixtapa-solo.jpg" alt="Trajes de baño en Ixtapa Zihuatanejo Siboney" />
+    </div>
   </div>
 </div>
 
@@ -31,18 +30,21 @@ const h2 ="Playa o Piscina"
   ideales para ti.
 </article>
 
+<div class="paralax">
+
+</div>
+
 <style lang="scss">
   #Playaoalberca {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  repeat(3, 1fr); 
     grid-template-rows: 1fr 20%;
     background: rgb(42, 32, 158);
     position: relative;
-    background: linear-gradient(
-      90deg,
-      rgba(42, 32, 158, 1) 60%,
-      rgba(255, 255, 255, 1) 60%
-    );
+    background: linear-gradient(90deg,
+        rgba(42, 32, 158, 1) 60%,
+        rgba(255, 255, 255, 1) 60%);
+
     &:before {
       content: "";
       width: 300px;
@@ -52,17 +54,17 @@ const h2 ="Playa o Piscina"
       mix-blend-mode: multiply;
       position: absolute;
       left: 0;
-      bottom:0%;
+      bottom: 0%;
+
       @media (max-width: 414px) {
-          bottom:40%;
+        bottom: 40%;
       }
     }
+
     @media (max-width: 414px) {
-      background: linear-gradient(
-        0deg,
-        rgba(255, 255, 255, 1) 40%,
-        rgba(42, 32, 158, 1) 40%
-      );
+      background: linear-gradient(0deg,
+          rgba(255, 255, 255, 1) 40%,
+          rgba(42, 32, 158, 1) 40%);
     }
 
     .bandeja {
@@ -75,11 +77,24 @@ const h2 ="Playa o Piscina"
       -webkit-transform: translateY(10%);
       transform: translateY(10%);
 
-      h2{
+      h2 {
         color: #fff;
       }
+
       @media (max-width: 414px) {
         flex-wrap: wrap;
+      }
+      article{
+        flex: 1;
+      }
+
+      .traje {
+        flex: 1;
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }
@@ -95,5 +110,13 @@ const h2 ="Playa o Piscina"
       margin-top: 50%;
       width: min(100% - 5rem, 80rem);
     }
+  }
+  .paralax{
+    margin-top:5em;
+    width: 100%;
+    height: 30vw;
+    background: url("/assets/siboney-maaji-ixtapa.jpg") no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
   }
 </style>
