@@ -83,13 +83,17 @@ const h2 = "Playa o Piscina"
 
       @media (max-width: 414px) {
         flex-wrap: wrap;
+        display: block;
+        article {
+        padding-bottom: 2rem;
+        }
       }
       article{
-        flex: 1;
+        flex: 1 0 33.33%;
       }
 
       .traje {
-        flex: 1;
+        flex: 1 0 33.33%;
         img {
           object-fit: cover;
           width: 100%;
@@ -118,5 +122,11 @@ const h2 = "Playa o Piscina"
     background: url("/assets/siboney-maaji-ixtapa.jpg") no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    @media (max-width: 414px) {
+      background-size: contain;
+      background-attachment:scroll;
+      background-size: 100%;
+      height: 68vw;
+    }
   }
 </style>
