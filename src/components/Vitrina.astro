@@ -63,12 +63,16 @@
   .carta {
     flex: 1;
     background-color: rgb(225, 207, 207);
-    padding: 2rem 1rem 0;
+    // padding: 2rem 1rem ;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
     background: rgb(255, 255, 255);
+     @media(max-width: 414px) {
+      padding: 1rem 0;
+      flex: 1 0 100%;
+     }
     background: linear-gradient(
       0deg,
       rgba(255, 255, 255, 1) 0%,
@@ -91,9 +95,10 @@
   
 }
   .info {
-    text-align: left;
-    color: #fff;
-    background-color: #2a209e;
+    text-align: center;
+    color: #2a209e;
+    background-color: #fff;
+    border-bottom: solid 2px #2a209e;
     flex: 1 0 100%;
     display: flex;
     justify-content: center;
